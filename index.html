@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pressure Washing Services</title>
+  <style>
+    /* Add your CSS styles here */
+    /* ... (existing CSS styles) ... */
+
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat&display=swap');
+
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      position: relative;
+    }
+
+    .reveal-container {
+      opacity: 0;
+      top: -20px; /* Adjust the value to set the initial position */
+      position: relative;
+      transition: top 5s ease, opacity 5s ease; /* Changed from opacity only to both opacity and top */
+    }
+
+    .reveal-container.loaded {
+      opacity: 1;
+      top: 0; /* The content returns to its original position */
+    }
+
+    header {
+      background-color: #fff;
+      color: #003049;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      position: relative; /* Add this line */
+      border-top: 10px solid #003049;
+      border-bottom: 10px solid #003049; /* Add this line to create a thin bottom border */
+    border-left: 10px solid #003049; /* Add this line to create a thin left border */
+    border-right: 10px solid #003049; 
+    }
+
+    
+
+    .logo {
+    width: 450px; /* Set the desired width in pixels or any other unit */
+    height: 250px; /* Set the desired height */
+  }
+
+    h1 {
+      margin: 0;
+      font-family: 'Georgia';
+      font-size: 3rem;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: #005b96;
+      padding: 1rem 0;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1.5rem;
+      transition: opacity 0.3s ease;
+      position: relative;
+    }
+
+    .navbar a:hover {
+      opacity: 0.7;
+    }
+
+    .navbar a::before {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      width: 0;
+      height: 3px;
+      background-color: #fff;
+      transition: width 0.3s ease;
+      transform: translateX(-50%);
+    }
+
+    .navbar a:hover::before {
+      width: 100%;
+    }
+
+    .content {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    h2 {
+      color: #003049;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      color: #333;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    li {
+      margin: 0 1rem;
+      font-size: 1.2rem;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      border: 2px solid #003049;
+      border-radius: 30px;
+      background-color: #003049;
+      transition: background-color 0.3s ease;
+    }
+
+    li:hover {
+      background-color: #005b96;
+      border-color: #005b96;
+    }
+
+    /* Styles for the portfolio section */
+    .portfolio {
+      padding: 4rem 2rem;
+      text-align: center;
+      background-color: #f4f4f4;
+    }
+
+    .portfolio-images {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      justify-content: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .portfolio-image {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal-container">
+    <header>
+      <img src="1.jpg" alt="Pressure Washing Services Logo" class="logo" />
+      <h1>Pressure Washing Services</h1>
+    </header>
+    <div class="navbar">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="content">
+      <section id="about">
+        <h2>About Us</h2>
+        <p>
+          Welcome to Pressure Washing Services! We are a professional pressure washing company committed to providing high-quality cleaning solutions for residential and commercial properties. With years of experience in the industry, we have built a reputation for excellence and customer satisfaction.
+        </p>
+      </section>
+      <section id="services">
+        <h2>Our Services</h2>
+        <p>
+          We offer a wide range of pressure washing services to meet your needs:
+        </p>
+        <ul>
+          <li>Exterior House Washing</li>
+          <li>Driveway and Sidewalk Cleaning</li>
+          <li>Deck and Patio Pressure Washing</li>
+          <li>Fence and Wall Cleaning</li>
+          <li>Commercial Building Washing</li>
+          <li>And more...</li>
+        </ul>
+      </section>
+      <section id="portfolio">
+        <h2>Our Portfolio</h2>
+        <div class="portfolio-images">
+          <img src="2.jpg" alt="Portfolio Image 1" class="portfolio-image" />
+          <img src="3.jpg" alt="Portfolio Image 2" class="portfolio-image" />
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Contact Us</h2>
+        <p>
+          Have a question or want to schedule an appointment? Get in touch with us today!
+        </p>
+        <p>Email: danosoftwashservices@gmail.com</p>
+        <p>Phone: (850) 207-5712</p>
+        <!-- You can add a contact form here for users to reach out to you -->
+      </section>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for smooth scrolling
+    const navbarLinks = document.querySelectorAll(".navbar a");
+
+    navbarLinks.forEach(link => {
+      link.addEventListener("click", smoothScroll);
+    });
+
+    function smoothScroll(event) {
+      event.preventDefault();
+      const targetId = event.currentTarget.getAttribute("href");
+      const targetElement = document.querySelector(targetId);
+      const headerOffset = 100; // Adjust this value as needed to offset the fixed header height
+      const elementPosition = targetElement.getBoundingClientRect().top;
+      const offsetPosition = elementPosition - headerOffset;
+
+      window.scrollBy({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+
+    // Add the loaded class to the reveal container once the page has fully loaded
+    window.addEventListener("load", () => {
+      document.querySelector(".reveal-container").classList.add("loaded");
+    });
+  </script>
+</body>
+</html>
