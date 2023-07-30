@@ -39,14 +39,14 @@
       position: relative; /* Add this line */
       border-top: 10px solid #003049;
       border-bottom: 10px solid #003049; /* Add this line to create a thin bottom border */
-    border-left: 10px solid #003049; /* Add this line to create a thin left border */
-    border-right: 10px solid #003049; 
+      border-left: 10px solid #003049; /* Add this line to create a thin left border */
+      border-right: 10px solid #003049; 
     }
 
     .logo {
-    width: 450px; /* Set the desired width in pixels or any other unit */
-    height: 250px; /* Set the desired height */
-  }
+      width: 450px; /* Set the desired width in pixels or any other unit */
+      height: 250px; /* Set the desired height */
+    }
 
     h1 {
       margin: 0;
@@ -152,6 +152,34 @@
       width: 100%;
       height: auto;
       border-radius: 10px;
+    }
+
+    /* Responsive styles for mobile devices */
+    @media (max-width: 768px) {
+      header {
+        padding: 1rem;
+      }
+
+      .logo {
+        width: 100%; /* Make the logo occupy the full width on mobile devices */
+        height: auto; /* Allow the logo to scale proportionally */
+      }
+
+      h1 {
+        font-size: 2.5rem; /* Decrease the font size on smaller screens */
+      }
+
+      .navbar {
+        padding: 0.5rem 0; /* Adjust padding for the navbar on mobile */
+      }
+
+      .navbar a {
+        margin: 0 0.5rem; /* Adjust spacing for the navbar links on mobile */
+      }
+
+      .content ul {
+        padding: 0 0.5rem; /* Adjust padding for the services list on mobile */
+      }
     }
   </style>
 </head>
