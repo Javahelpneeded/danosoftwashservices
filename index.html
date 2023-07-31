@@ -138,18 +138,17 @@
       padding: 2rem 1rem; /* Decrease the padding on smaller screens */
       text-align: center;
       background-color: #f4f4f4;
-      overflow-x: auto; /* Enable horizontal scrolling on smaller screens */
-      white-space: nowrap; /* Prevent the content from wrapping */
     }
 
     .portfolio-images {
-      display: inline-block; /* Display portfolio images in a row on smaller screens */
-      margin: 0 0.5rem; /* Adjust margin to separate images */
-      white-space: normal; /* Allow the content to wrap */
+      display: flex; /* Display portfolio images in a row on smaller screens */
+      flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+      justify-content: center;
+      margin: 0 -0.5rem; /* Adjust margin to compensate for wrapping */
     }
 
     .portfolio-image {
-      width: 250px; /* Adjust image width for better mobile view */
+      width: calc(50% - 1rem); /* Display two images in a row on smaller screens */
       height: auto;
       border-radius: 10px;
       margin: 0.5rem; /* Add margin between images */
@@ -177,20 +176,10 @@
         padding: 0 0.5rem; /* Adjust padding for the services list on mobile */
       }
 
-      .portfolio-images {
-        display: flex; /* Display portfolio images in a column on mobile */
-        flex-direction: column;
-        align-items: center;
-        white-space: normal; /* Allow the content to wrap */
-      }
-
-      .portfolio {
-        padding-bottom: 1rem; /* Add some padding at the bottom for better scrolling on mobile */
-        overflow-x: scroll; /* Enable horizontal scrolling on smaller screens */
-      }
-
-      .portfolio-image {
-        width: 100%; /* Make portfolio images occupy the full width on mobile */
+      /* Allow the "About," "Services," "Portfolio," and "Contact" sections to scroll on mobile */
+      #about, #services, #portfolio, #contact {
+        overflow-y: auto;
+        max-height: calc(100vh - 220px); /* Adjust the max-height to leave space for header and navbar */
       }
     }
   </style>
@@ -230,12 +219,9 @@
       </section>
       <section id="portfolio">
         <h2>Our Portfolio</h2>
-        <div class="portfolio">
-          <div class="portfolio-images">
-            <img src="2.jpg" alt="Portfolio Image 1" class="portfolio-image" />
-            <img src="3.jpg" alt="Portfolio Image 2" class="portfolio-image" />
-            <!-- Add more portfolio images here -->
-          </div>
+        <div class="portfolio-images">
+          <img src="2.jpg" alt="Portfolio Image 1" class="portfolio-image" />
+          <img src="3.jpg" alt="Portfolio Image 2" class="portfolio-image" />
         </div>
       </section>
       <section id="contact">
