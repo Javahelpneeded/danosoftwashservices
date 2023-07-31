@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pressure Washing Services</title>
   <style>
-    /* Add your CSS styles here */
-    /* ... (existing CSS styles) ... */
-
     @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat&display=swap');
 
     body {
@@ -22,12 +19,12 @@
       opacity: 0;
       top: -20px; /* Adjust the value to set the initial position */
       position: relative;
-      transition: top 5s ease, opacity 5s ease; /* Changed from opacity only to both opacity and top */
+      transition: top 5s ease, opacity 5s ease;
     }
 
     .reveal-container.loaded {
       opacity: 1;
-      top: 0; /* The content returns to its original position */
+      top: 0;
     }
 
     header {
@@ -35,26 +32,26 @@
       color: #003049;
       padding: 2rem;
       display: flex;
-      flex-wrap: wrap; /* Allow elements to wrap to new lines on smaller screens */
+      flex-wrap: wrap;
       align-items: center;
-      justify-content: center; /* Center the logo and heading */
-      position: relative; /* Add this line */
+      justify-content: center;
+      position: relative;
       border-top: 10px solid #003049;
-      border-bottom: 10px solid #003049; /* Add this line to create a thin bottom border */
-      border-left: 10px solid #003049; /* Add this line to create a thin left border */
+      border-bottom: 10px solid #003049;
+      border-left: 10px solid #003049;
       border-right: 10px solid #003049; 
     }
 
     .logo {
-      width: 250px; /* Adjust the logo width for better mobile view */
-      height: auto; /* Allow the logo to scale proportionally */
+      width: 250px;
+      height: auto;
     }
 
     h1 {
-      margin: 1rem 0; /* Add some margin to the heading for better mobile view */
+      margin: 1rem 0;
       font-family: 'Georgia';
-      font-size: 2.5rem; /* Decrease the font size on smaller screens */
-      text-align: center; /* Center the heading text */
+      font-size: 2.5rem;
+      text-align: center;
     }
 
     .navbar {
@@ -64,18 +61,17 @@
       padding: 1rem 0;
       font-size: 1.2rem;
       text-transform: uppercase;
+      overflow-x: auto;
+      white-space: nowrap;
     }
 
     .navbar a {
       color: #fff;
       text-decoration: none;
-      margin: 0 1rem; /* Adjust spacing for the navbar links */
+      margin: 0 1rem;
       transition: opacity 0.3s ease;
       position: relative;
-    }
-
-    .navbar a:hover {
-      opacity: 0.7;
+      display: inline-block;
     }
 
     .navbar a::before {
@@ -95,19 +91,19 @@
     }
 
     .content {
-      padding: 2rem 1rem; /* Decrease the padding on smaller screens */
+      padding: 2rem 1rem;
       text-align: center;
     }
 
     h2 {
       color: #003049;
-      font-size: 2rem; /* Decrease the font size on smaller screens */
-      margin-bottom: 1.5rem; /* Add some margin for better separation */
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
     }
 
     p {
       color: #333;
-      font-size: 1rem; /* Decrease the font size on smaller screens */
+      font-size: 1rem;
       line-height: 1.6;
     }
 
@@ -118,10 +114,10 @@
     }
 
     li {
-      margin: 0.5rem 0; /* Adjust spacing between list items on smaller screens */
-      font-size: 1rem; /* Decrease the font size on smaller screens */
+      margin: 0.5rem 0;
+      font-size: 1rem;
       color: #fff;
-      padding: 0.5rem 1rem; /* Adjust padding for list items */
+      padding: 0.5rem 1rem;
       border: 2px solid #003049;
       border-radius: 30px;
       background-color: #003049;
@@ -133,53 +129,52 @@
       border-color: #005b96;
     }
 
-    /* Styles for the portfolio section */
     .portfolio {
-      padding: 2rem 1rem; /* Decrease the padding on smaller screens */
+      padding: 2rem 1rem;
       text-align: center;
       background-color: #f4f4f4;
     }
 
     .portfolio-images {
-      display: flex; /* Display portfolio images in a row on smaller screens */
-      flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+      display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      margin: 0 -0.5rem; /* Adjust margin to compensate for wrapping */
+      margin: 0 -0.5rem;
     }
 
     .portfolio-image {
-      width: calc(50% - 1rem); /* Display two images in a row on smaller screens */
+      width: calc(50% - 1rem);
       height: auto;
       border-radius: 10px;
-      margin: 0.5rem; /* Add margin between images */
+      margin: 0.5rem;
     }
 
     /* Responsive styles for mobile devices */
     @media (max-width: 768px) {
       .logo {
-        width: 100%; /* Make the logo occupy the full width on mobile devices */
+        width: 100%;
       }
 
       h1 {
-        font-size: 2rem; /* Decrease the font size on smaller screens */
+        font-size: 2rem;
       }
 
       .navbar {
-        padding: 0.5rem 0; /* Adjust padding for the navbar on mobile */
+        padding: 0.5rem 0;
       }
 
       .navbar a {
-        margin: 0 0.5rem; /* Adjust spacing for the navbar links on mobile */
+        margin: 0 0.5rem;
       }
 
       .content ul {
-        padding: 0 0.5rem; /* Adjust padding for the services list on mobile */
+        padding: 0 0.5rem;
       }
 
-      /* Allow the "About," "Services," "Portfolio," and "Contact" sections to scroll on mobile */
-      #about, #services, #portfolio, #contact {
-        overflow-y: auto;
-        max-height: calc(100vh - 220px); /* Adjust the max-height to leave space for header and navbar */
+      /* Scrollable navigation links on mobile */
+      .navbar {
+        flex-wrap: wrap;
+        justify-content: flex-start;
       }
     }
   </style>
